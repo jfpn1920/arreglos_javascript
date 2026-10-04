@@ -1,0 +1,77 @@
+/* ===== Variables de color ===== */
+:root {
+  --fondo: #eef2f8;      /* fondo general azul muy claro */
+  --tinta: #14213d;      /* color del texto */
+  --blanco: #ffffff;     /* fondo de los paneles */
+  --ambar: #fca311;      /* color de acento */
+  --borde: #cdd6e6;      /* color de bordes suaves */
+  --rojo: #c8333f;       /* mensajes de error y eliminar */
+}
+/* ===== Reinicio básico de márgenes ===== */
+* {
+    box-sizing: border-box; /* el padding no agranda los elementos */
+    margin: 0;
+    padding: 0;
+}
+/* ===== Estilo general del cuerpo (letra tipo código) ===== */
+body { font-family: Consolas, "Courier New", monospace; background: var(--fondo); color: var(--tinta); line-height: 1.5; }
+/* ===== Encabezado ===== */
+.encabezado { background: var(--tinta); color: var(--blanco); text-align: center; padding: 40px 20px; }
+.encabezado h1 { font-size: 2.4rem; margin-bottom: 8px; color: var(--ambar); }
+/* ===== Contenedor central ===== */
+main { max-width: 720px; margin: 0 auto; padding: 30px 20px 50px; }
+/* ===== Paneles blancos ===== */
+.panel {
+    background: var(--blanco);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+/* ===== Lista numerada de instrucciones ===== */
+.panel ol { padding-left: 20px; }
+/* ===== Fila con elementos en horizontal ===== */
+.fila { display: flex; flex-wrap: wrap; gap: 10px; }
+/* ===== Campo de texto ===== */
+input {
+    flex: 1;
+    min-width: 180px;
+    padding: 10px 12px;
+    border: 2px solid var(--borde);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+/* ===== Botones ===== */
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: var(--ambar);
+    color: var(--tinta);
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+}
+button:hover { opacity: 0.85; }
+/* Botón con aspecto más discreto */
+.secundario { background: transparent; border: 2px solid var(--borde); }
+/* Borde visible al navegar con el teclado */
+input:focus-visible, button:focus-visible { outline: 3px solid var(--tinta); }
+/* ===== Mensaje de error ===== */
+#mensaje { color: var(--rojo); min-height: 1.5em; }
+/* ===== Lista de nombres ===== */
+#lista { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+/* Cada nombre es una fila con texto y botón de eliminar */
+#lista li { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border: 2px solid var(--borde); border-radius: 8px; }
+/* Botón pequeño para eliminar un nombre */
+.btn-eliminar { background: var(--rojo); color: var(--blanco); padding: 6px 12px; font-size: 0.85rem; }
+/* ===== Bloque de código oscuro ===== */
+/* Fondo oscuro y letra verde, como una terminal */
+pre { background: var(--tinta); color: #7ee787; padding: 16px; border-radius: 8px; white-space: pre-wrap; word-break: break-word; }
+/* ===== Texto auxiliar ===== */
+/* Color gris azulado para el contador */
+#contador { color: #5d6b8a; }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arreglos javascript</title>
+    <link rel="stylesheet" href="arreglos_javascript.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="arreglos_javascript.js" defer></script>
+</head>
+<body>
+    <!---------------------------------------->
+    <!--|estructuracion_arreglos_javascript|-->
+    <!---------------------------------------->
+    <header class="encabezado">
+        <!-- Título principal -->
+        <h1>Arreglos JavaScript</h1>
+        <p>Cada nombre que agregas se guarda en un arreglo (array).</p>
+    </header>
+    <!-- Fin del encabezado -->
+    <!-- Contenido principal de la página -->
+    <main>
+        <!-- Cada panel es una sección con fondo blanco -->
+        <!-- Panel con las instrucciones de uso -->
+        <section class="panel">
+            <!-- Título del panel -->
+            <h2>Cómo usar esta página</h2>
+            <!-- Lista numerada con los pasos -->
+            <ol>
+                <!-- Paso 1 -->
+                <li>Escribe un nombre en el campo de texto.</li>
+                <!-- Paso 2 -->
+                <li>Pulsa "Agregar" o la tecla Enter.</li>
+                <!-- Paso 3 -->
+                <li>Mira cómo cambia el arreglo en el último panel.</li>
+            </ol>
+            <!-- Fin de la lista numerada -->
+        </section>
+        <!-- Fin de las instrucciones -->
+        <!-- Panel para agregar un nombre -->
+        <section class="panel">
+            <!-- Título del panel -->
+            <h2>Agregar un nombre</h2>
+            <!-- Fila con el campo de texto y el botón -->
+            <div class="fila">
+                <!-- Campo donde se escribe el nombre -->
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Ej: Juan"
+                    maxlength="30"
+                >
+                <!-- Botón que agrega el nombre al arreglo -->
+                <button id="btnAgregar">Agregar</button>
+            </div>
+            <!-- Fin de la fila -->
+            <!-- Aquí JavaScript muestra mensajes de error -->
+            <p id="mensaje"></p>
+        </section>
+        <!-- Fin del panel para agregar -->
+        <!-- Panel con la lista de nombres -->
+        <section class="panel">
+            <!-- Título del panel -->
+            <h2>Lista de nombres</h2>
+            <!-- Texto con la cantidad de nombres -->
+            <p id="contador"></p>
+            <!-- Lista donde JavaScript dibuja los nombres -->
+            <ul id="lista"></ul>
+            <!-- Fin de la lista de nombres -->
+            <!-- Botón que borra todos los nombres -->
+            <button id="btnLimpiar" class="secundario">Vaciar lista</button>
+        </section>
+        <!-- Fin de la lista -->
+        <!-- Panel que muestra el arreglo tal como lo ve JavaScript -->
+        <section class="panel">
+            <!-- Título del panel -->
+            <h2>Así se ve el arreglo</h2>
+            <!-- Bloque de código; JavaScript escribe aquí el arreglo -->
+            <pre id="codigo"></pre>
+            <!-- Fin del bloque de código -->
+        </section>
+        <!-- Fin del arreglo -->
+    </main>
+</body>
+</html>
